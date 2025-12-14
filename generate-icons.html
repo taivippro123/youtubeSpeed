@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Generate Icons</title>
+</head>
+<body>
+  <h1>Icon Generator</h1>
+  <p>Click the buttons below to generate and download icons:</p>
+  
+  <div>
+    <button onclick="generateIcon(16)">Generate 16x16</button>
+    <button onclick="generateIcon(48)">Generate 48x48</button>
+    <button onclick="generateIcon(128)">Generate 128x128</button>
+  </div>
+  
+  <canvas id="canvas" style="border: 1px solid #ccc; margin-top: 20px;"></canvas>
+  
+  <script>
+    function generateIcon(size) {
+      const canvas = document.getElementById('canvas');
+      canvas.width = size;
+      canvas.height = size;
+      const ctx = canvas.getContext('2d');
+      
+      // Background
+      ctx.fillStyle = '#1976d2';
+      ctx.fillRect(0, 0, size, size);
+      
+      // Draw play icon (triangle)
+      ctx.fillStyle = '#ffffff';
+      ctx.beginPath();
+      const padding = size * 0.2;
+      ctx.moveTo(padding, padding);
+      ctx.lineTo(size - padding, size / 2);
+      ctx.lineTo(padding, size - padding);
+      ctx.closePath();
+      ctx.fill();
+      
+      // Draw speed indicator (2x text)
+      if (size >= 48) {
+        ctx.fillStyle = '#1976d2';
+        ctx.font = `bold ${size * 0.3}px Arial`;
+        ctx.textAlign = 'center';
+        ctx.textBaseline = 'middle';
+        ctx.fillText('2x', size / 2, size * 0.7);
+      }
+      
+      // Download
+      canvas.toBlob(function(blob) {
+        const url = URL.createObjectURL(blob);
+        const a = document.createElement('a');
+        a.href = url;
+        a.download = `icon${size}.png`;
+        a.click();
+        URL.revokeObjectURL(url);
+      });
+    }
+  </script>
+</body>
+</html>
+

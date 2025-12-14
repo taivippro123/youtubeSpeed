@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>YouTube Auto Speed</title>
+  <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+  <div class="container">
+    <h1>YouTube Auto Speed</h1>
+    
+    <div class="section">
+      <label for="keywords">Từ khóa cho tốc độ chậm (mỗi từ khóa một dòng):</label>
+      <textarea id="keywords" placeholder="remix&#10;nhạc&#10;MV&#10;official MV lyrics&#10;music"></textarea>
+      <small>Video chứa từ khóa này sẽ phát ở tốc độ chậm</small>
+    </div>
+
+    <div class="section">
+      <label for="categoryKeywords">Từ khóa cho Category/Genre (mỗi từ khóa một dòng):</label>
+      <textarea id="categoryKeywords" placeholder="Âm nhạc&#10;Music&#10;Nhạc"></textarea>
+      <small>Nếu category/genre chứa từ khóa này, sẽ được coi là video nhạc</small>
+    </div>
+
+    <div class="section">
+      <label class="checkbox-label">
+        <input type="checkbox" id="useYouTubeAPI">
+        <span>Sử dụng YouTube Data API (chính xác nhất, cần API key)</span>
+      </label>
+    </div>
+
+    <div class="section" id="youtubeApiSection" style="display: none;">
+      <label for="youtubeApiKey">YouTube Data API Key (tùy chọn):</label>
+      <input type="text" id="youtubeApiKey" placeholder="AIza...">
+      <small><a href="http://console.cloud.google.com/apis/library/youtube.googleapis.com" target="_blank">Lấy API key miễn phí tại đây</a> - Free 10,000 requests/ngày</small>
+    </div>
+
+    <div class="section">
+      <label class="section-label">Tìm từ khóa trong:</label>
+      <div class="checkbox-group">
+        <label class="checkbox-label">
+          <input type="checkbox" id="checkTitle" checked>
+          <span>Tiêu đề video</span>
+        </label>
+        <label class="checkbox-label">
+          <input type="checkbox" id="checkTags" checked>
+          <span>Tags của video</span>
+        </label>
+        <label class="checkbox-label">
+          <input type="checkbox" id="checkCategory" checked>
+          <span>Category / Genre</span>
+        </label>
+        <label class="checkbox-label">
+          <input type="checkbox" id="checkChannelType">
+          <span>Loại kênh (Channel Type)</span>
+        </label>
+      </div>
+    </div>
+
+    <div class="section">
+      <label for="slowSpeed">Tốc độ cho video có từ khóa:</label>
+      <input type="number" id="slowSpeed" min="0.25" max="4" step="0.25" value="1">
+    </div>
+
+    <div class="section">
+      <label for="fastSpeed">Tốc độ cho video khác:</label>
+      <input type="number" id="fastSpeed" min="0.25" max="4" step="0.25" value="2">
+    </div>
+
+    <div class="section">
+      <label class="checkbox-label">
+        <input type="checkbox" id="enabled" checked>
+        <span>Bật tự động điều chỉnh</span>
+      </label>
+    </div>
+
+    <button id="saveBtn" class="save-btn">Lưu cài đặt</button>
+    
+    <div id="status" class="status"></div>
+  </div>
+
+  <script src="popup.js"></script>
+</body>
+</html>
+
