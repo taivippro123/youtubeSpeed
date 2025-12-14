@@ -24,9 +24,9 @@ Hoặc click vào nút **Code** → **Download ZIP** ở góc trên bên phải 
 ### Bước 2: Giải nén file ZIP
 
 1. Mở thư mục **Downloads** trên máy tính
-2. Tìm file `youtube-speed-extension.zip` (hoặc tên tương tự)
+2. Tìm file `youtubeSpeed-main.zip` (hoặc tên tương tự)
 3. **Click chuột phải** vào file ZIP → Chọn **Extract All** (Giải nén tất cả) hoặc **Extract Here** (Giải nén tại đây)
-4. Một thư mục mới sẽ xuất hiện tên là `youtube-speed-extension` (hoặc tương tự)
+4. Một thư mục mới sẽ xuất hiện tên là `youtubeSpeed-main` (hoặc tương tự)
 
 ### Bước 3: Mở Chrome Extensions
 
@@ -44,8 +44,8 @@ Hoặc click vào nút **Code** → **Download ZIP** ở góc trên bên phải 
 
 1. Click vào nút **Load unpacked** (Tải tiện ích đã giải nén)
 2. Một cửa sổ chọn thư mục sẽ hiện ra
-3. **Điều hướng** đến thư mục `youtube-speed-extension` mà bạn đã giải nén ở Bước 2
-4. **Chọn thư mục** `youtube-speed-extension` (không chọn file bên trong, chỉ chọn thư mục)
+3. **Điều hướng** đến thư mục `youtubeSpeed-main` mà bạn đã giải nén ở Bước 2
+4. **Chọn thư mục** `youtubeSpeed-main` (không chọn file bên trong, chỉ chọn thư mục)
 5. Click **Select Folder** (Chọn thư mục) hoặc **Select** (Chọn)
 
 ### Bước 6: Hoàn tất!
@@ -144,9 +144,9 @@ Or click the **Code** → **Download ZIP** button in the top right corner of thi
 ### Step 2: Extract ZIP File
 
 1. Open your **Downloads** folder on your computer
-2. Find the file `youtube-speed-extension.zip` (or similar name)
+2. Find the file `youtubeSpeed-main.zip` (or similar name)
 3. **Right-click** on the ZIP file → Select **Extract All** or **Extract Here**
-4. A new folder will appear named `youtube-speed-extension` (or similar)
+4. A new folder will appear named `youtubeSpeed-main` (or similar)
 
 ### Step 3: Open Chrome Extensions
 
@@ -164,8 +164,8 @@ Or click the **Code** → **Download ZIP** button in the top right corner of thi
 
 1. Click the **Load unpacked** button
 2. A folder selection window will appear
-3. **Navigate** to the `youtube-speed-extension` folder you extracted in Step 2
-4. **Select** the `youtube-speed-extension` folder (not files inside, just the folder)
+3. **Navigate** to the `youtubeSpeed-main` folder you extracted in Step 2
+4. **Select** the `youtubeSpeed-main` folder (not files inside, just the folder)
 5. Click **Select Folder** or **Select**
 
 ### Step 6: Done!
